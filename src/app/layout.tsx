@@ -32,11 +32,11 @@ export default function RootLayout({
           {/* HEADER */}
           <Header />
           {children}
+          <Banner />
+          <Newsletter />
+          {/* FOOTER */}
+          <Footer />
         </div>
-        <Banner />
-        <Newsletter />
-        {/* FOOTER */}
-        <Footer />
       </body>
     </html>
   );
