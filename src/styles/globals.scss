@@ -1,0 +1,146 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --white: #ffffff;
+  --color-foreground: var(--foreground);
+  --font-inter: "Inter", sans-serif;
+  --primary-color: #5152fb;
+  --light-grey: #f0f2f7;
+  --lighter-grey: #a8a8a8;
+  --typography-light: #838a90;
+  --typography-dark: #1e1e1e;
+  --light-purple: #ddddfd;
+  --ice-cold-blue: #ebf3ff;
+  --midnight-blue: #0a0a2b;
+  --cosmic-blue: #1f2068;
+  --leading-heading: 1.2;
+}
+
+//************** GLOBAL STYLES ************** //
+$sec_padd: clamp(3.75rem, 4.375vw + 2.875rem, 8.125rem);
+.section-padding {
+  padding: $sec_padd;
+
+  &--t {
+    padding-top: $sec_padd;
+  }
+  &--b {
+    padding-bottom: $sec_padd;
+  }
+  &--l {
+    padding-left: $sec_padd;
+  }
+  &--r {
+    padding-right: $sec_padd;
+  }
+  &--x {
+    padding-left: $sec_padd;
+    padding-right: $sec_padd;
+  }
+  &--y {
+    padding-top: $sec_padd;
+    padding-bottom: $sec_padd;
+  }
+}
+
+.text-primary {
+  color: var(--primary-color);
+
+  &--light-grey {
+    color: var(--typography-light);
+  }
+
+  &--dark-grey {
+    color: var(--typography-dark);
+  }
+
+  &--white {
+    color: var(--white);
+  }
+
+  &--light-purple {
+    color: var(--light-purple);
+  }
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+
+  &--white {
+    background-color: var(--white);
+  }
+
+  &--light-grey {
+    background-color: var(--light-grey);
+  }
+
+  &--midnight-blue {
+    background-color: var(--midnight-blue);
+  }
+
+  &--ice-cold-blue {
+    background-color: var(--ice-cold-blue);
+  }
+
+  &--cosmic-blue {
+    background-color: var(--cosmic-blue);
+  }
+}
+
+h1,
+.h1 {
+  font-size: clamp(2rem, 1.6622rem + 1.0811vw, 3rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 1.3311rem + 0.5405vw, 2rem);
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 1.1655rem + 0.2703vw, 1.5rem);
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: clamp(1.125rem, 1.0828rem + 0.1351vw, 1.25rem);
+}
+
+p {
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+a {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+li > a {
+  font-weight: 400;
+
+  &:hover {
+    color: white;
+  }
+}
+
+body {
+  background: var(--white);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+}
+
+.jane-doe {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -10%;
+}

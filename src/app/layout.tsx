@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Inter } from "next/font/google";
+import "@/styles/globals.scss";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
+import Banner from "@/components/Banner/Banner";
+import Newsletter from "@/components/Newsletter/Newsletter";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -24,10 +24,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* BODY */}
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.variable} antialiased font-inter text-primary--dark-grey`}
       >
-        {children}
+        <div className="page-wrap px-5 mx-auto max-w-screen-2xl">
+          {/* HEADER */}
+          <Header />
+          {children}
+        </div>
+        <Banner />
+        <Newsletter />
+        {/* FOOTER */}
+        <Footer />
       </body>
     </html>
   );
