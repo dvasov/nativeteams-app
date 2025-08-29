@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Banner() {
   return (
-    <section className="w-full bg-primary--ice-cold-blue relative">
+    <section className="w-full bg-primary--ice-cold-blue relative mt-20">
       <Image
         className="absolute top-0 left-0 hidden lg:block"
         src="/globals/nativeteams-big-light.png"

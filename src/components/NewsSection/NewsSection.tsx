@@ -8,7 +8,7 @@ import { slugify } from "@/utils/utils";
 
 // NYT categories (sections)
 const categories = [
-  "All",
+  "home",
   "Arts",
   "Automobiles",
   "Books",
@@ -113,7 +113,7 @@ export default function NewsSection() {
 
       {/* Latest Article */}
       {latest && (
-        <div className="p-7 lg:p-20 lg:py-20 lg:px-25 bg-primary--ice-cold-blue rounded-2xl mb-10">
+        <div className="p-7 lg:p-20 lg:py-20 lg:px-25 bg-primary--ice-cold-blue rounded-2xl mb-10 border-[1px] border-[var(--lighter-grey)]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[3rem] card card-side">
             {latest.multimedia?.[0]?.url && (
               <img
@@ -127,7 +127,7 @@ export default function NewsSection() {
             )}
             <div className="card-body flex items-start justify-center p-0">
               <div className="space-y-5">
-                <div className="rounded-xl bg-blue-500 text-center justify-center items-center flex w-fit max-w-max px-5 py-2">
+                <div className="rounded-xl bg-primary text-center justify-center items-center flex w-fit max-w-max px-5 py-2">
                   <p className="text-white !text-xs">6 min read</p>
                 </div>
                 <h2 className="text-2xl font-bold mb-2">{latest.title}</h2>
@@ -135,7 +135,7 @@ export default function NewsSection() {
                 <div className="w-fit max-w-max">
                   <Link
                     href={`/post/${latest.slug}?category=${selectedCategory}`}
-                    className="text-blue-500 leading-none flex justify-start items-center gap-[.75rem]"
+                    className="text-primary leading-none flex justify-start items-center gap-[.75rem]"
                   >
                     Read more
                     {/* Note: I'm replacing the Image component with an SVG for simplicity */}
@@ -169,7 +169,7 @@ export default function NewsSection() {
           <Link
             href={`/post/${article.slug}?category=${selectedCategory}`}
             key={article.url}
-            className="card grid grid-rows-2 border aspect-[1] rounded-2xl hover:shadow-lg shadow-[var(--primary-color)] transition-all duration-300 ease-in-out"
+            className="overflow-hidden card grid grid-rows-2 border-[1px] border-[var(--lighter-grey)] rounded-2xl transition-all duration-300 ease-in-out min-h-[30rem] hover:shadow-[-5px_5px_0px_0_var(--primary-color)]"
           >
             <div className="relative overflow-hidden h-full">
               {article.multimedia?.[0]?.url && (
@@ -186,7 +186,7 @@ export default function NewsSection() {
             <div className="pt-10 px-7 pb-7 flex flex-col justify-between">
               <h3 className="font-bold">{article.title}</h3>
               <div className="w-fit max-w-max">
-                <div className="text-blue-500 leading-none flex justify-start items-center gap-[.75rem]">
+                <div className="text-primary leading-none flex justify-start items-center gap-[.75rem]">
                   Read more
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

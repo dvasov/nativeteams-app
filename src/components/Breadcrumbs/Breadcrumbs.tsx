@@ -11,7 +11,7 @@ export default function Breadcrumbs({
   articleTitle,
 }: BreadcrumbsProps) {
   return (
-    <nav className="text-sm mb-4 flex items-center gap-[1.2rem]">
+    <nav className="text-sm mb-4 flex items-center gap-[1.2rem] flex-wrap">
       <Link
         href="/"
         className="transition-colors duration-300 ease hover:text-[var(--color-primary)] capitalize"
